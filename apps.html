@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<title>Now No one can stop your Downloads!</title>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<script src="main.js"></script>
+<script src="server.js"></script>
+<script src="apps.css"></script>
+<body>
+<center><img src = 'https://easydigitaldownloads.com/wp-content/uploads/edd/2016/04/free-downloads-featured-image.png ' width = '1200' hieght = '900'>
+<h1>Now No one can stop your Downloads!</h1>
+</center>
+
+
+<div ng-app="myApp" ng-controller="namesCtrl">
+<center>
+<input type="text" name="search" value="enter something" ng-model = 'searchByName'>
+
+<ul>
+  <li ng-repeat="x in allapps | filter: searchByName">
+  <img src="{{x.icon}} " width = '200' hieght = '200' id= "img" class="img-circle" width="200" height="200">	
+  	<br>
+<!--     {{ x.name }}
+ -->
+    <a href="{{x.url}}">{{x.name}}</a>
+  </li>
+</ul>
+
+</div>
+</center>
+
+<script>
+
+</script>
+
+<p>The results of your search are:</p>
+
+</body>
+</html>
